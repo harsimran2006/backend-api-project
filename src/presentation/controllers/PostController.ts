@@ -2,6 +2,7 @@ import { type Request, type Response } from "express";
 import { CreatePost } from "../../application/use-cases/post/CreatePost.js";
 import { EditPost } from "../../application/use-cases/post/EditPost.js";
 import { DeletePost } from "../../application/use-cases/post/DeletePost.js";
+import { GetPosts } from "../../application/use-cases/post/GetPosts.js";
 
 export class PostController {
     static async create(req: any, res: Response) {
@@ -41,6 +42,20 @@ export class PostController {
             const result = await useCase.execute(postId, userId);
 
             res.status(200).json(result);
+        } catch (error: any) {
+            res.status(400).json({ message: error.message });
+        }
+    }
+
+    static async getAll(req: Request, res: Response) {
+        try {
+            const page = Number(req.query.page) || 1;
+            const limit = Number(req.query.limit) || 10;
+
+            const useCase = new GetPosts();
+            const posts = await useCase.execute(page, limit);
+
+            res.status(200).json(posts);
         } catch (error: any) {
             res.status(400).json({ message: error.message });
         }
