@@ -1,6 +1,8 @@
 import express from "express";
 import { authRoutes } from "./presentation/route/authRoutes.js";
 import postRoutes from "./presentation/route/postRoutes.js";
+import commentRoutes from "./presentation/route/commentRoutes.js";
+
 
 const app = express();
 
@@ -10,6 +12,7 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/comments", commentRoutes);
 
 // Health endpoint (keep this!)
 app.get("/health", (req, res) => {
