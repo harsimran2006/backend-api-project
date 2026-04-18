@@ -9,9 +9,11 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "target": "esnext",
+    "esModuleInterop": true,
     "types": [
       "node",
-      "express"
+      "express",
+      "jest"
     ],
     // For nodejs:
     // "lib": ["esnext"],
