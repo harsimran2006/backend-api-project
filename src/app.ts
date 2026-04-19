@@ -1,10 +1,10 @@
 import express from "express";
-import { authRoutes } from "./presentation/route/authRoutes.js";
-import postRoutes from "./presentation/route/postRoutes.js";
-import commentRoutes from "./presentation/route/commentRoutes.js";
-import likeRoutes from "./presentation/route/likeRoutes.js";
+import { authRoutes } from "./route/authRoutes.js";
+import postRoutes from "./route/postRoutes.js";
+import commentRoutes from "./route/commentRoutes.js";
+import likeRoutes from "./route/likeRoutes.js";
 
-import adminRoutes from "./presentation/route/adminRoutes.js";
+import adminRoutes from "./route/adminRoutes.js";
 
 
 

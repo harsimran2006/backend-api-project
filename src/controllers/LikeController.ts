@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import { LikePost } from "../../application/use-cases/like/LikePost.js";
-import { UnlikePost } from "../../application/use-cases/like/UnlikePost.js";
+import { LikePost } from "../application/use-cases/like/LikePost.js";
+import { UnlikePost } from "../application/use-cases/like/UnlikePost.js";
 
 export class LikeController {
     static async like(req: any, res: Response) {

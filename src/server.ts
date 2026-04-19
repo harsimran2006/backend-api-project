@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import app from "./app.js";
-import { connectDB } from "./infrastructure/database/mongo.js";
+import { connectDB } from "./infrastructure/mongodb/connection.js";
 
 dotenv.config();
 

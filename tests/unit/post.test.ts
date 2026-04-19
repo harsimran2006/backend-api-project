@@ -1,4 +1,4 @@
-import { Post } from "../../src/infrastructure/database/models/Post.js";
+import { Post } from "../../src/infrastructure/mongodb/models/Post.js";
 
 describe("Post Model Unit Tests", () => {
 

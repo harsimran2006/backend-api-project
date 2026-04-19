@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { User } from "../database/models/User.js";
+import { User } from "../mongodb/models/User.js";
 
 export class LoginUser {
     async execute(email: string, password: string) {

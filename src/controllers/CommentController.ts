@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { CreateComment } from "../../application/use-cases/comment/CreateComment.js";
+import { CreateComment } from "../application/use-cases/comment/CreateComment.js";
 
 export class CommentController {
     static async create(req: any, res: Response) {

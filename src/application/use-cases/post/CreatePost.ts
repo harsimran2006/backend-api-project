@@ -1,4 +1,4 @@
-import { Post } from "../../../infrastructure/database/models/Post.js";
+import { Post } from "../../../infrastructure/mongodb/models/Post.js";
 
 export class CreatePost {
     async execute(title: string, body: string, userId: string) {

@@ -1,8 +1,8 @@
 import { type Request, type Response } from "express";
-import { CreatePost } from "../../application/use-cases/post/CreatePost.js";
-import { EditPost } from "../../application/use-cases/post/EditPost.js";
-import { DeletePost } from "../../application/use-cases/post/DeletePost.js";
-import { GetPosts } from "../../application/use-cases/post/GetPosts.js";
+import { CreatePost } from "../application/use-cases/post/CreatePost.js";
+import { EditPost } from "../application/use-cases/post/EditPost.js";
+import { DeletePost } from "../application/use-cases/post/DeletePost.js";
+import { GetPosts } from "../application/use-cases/post/GetPosts.js";
 
 export class PostController {
     static async create(req: any, res: Response) {

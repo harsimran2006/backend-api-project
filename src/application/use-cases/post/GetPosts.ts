@@ -1,6 +1,6 @@
-import { Post } from "../../../infrastructure/database/models/Post.js";
-import { Comment } from "../../../infrastructure/database/models/Comment.js";
-import { Like } from "../../../infrastructure/database/models/Like.js";
+import { Post } from "../../../infrastructure/mongodb/models/Post.js";
+import { Comment } from "../../../infrastructure/mongodb/models/Comment.js";
+import { Like } from "../../../infrastructure/mongodb/models/Like.js";
 
 export class GetPosts {
     async execute(page: number = 1, limit: number = 10) {

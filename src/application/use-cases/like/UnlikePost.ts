@@ -1,4 +1,4 @@
-import { Like } from "../../../infrastructure/database/models/Like.js";
+import { Like } from "../../../infrastructure/mongodb/models/Like.js";
 
 export class UnlikePost {
     async execute(postId: string, userId: string) {

@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import { RegisterUser } from "../../infrastructure/auth/RegisterUser.js";
-import { LoginUser } from "../../infrastructure/auth/LoginUser.js";
+import { RegisterUser } from "../infrastructure/auth/RegisterUser.js";
+import { LoginUser } from "../infrastructure/auth/LoginUser.js";
 
 export class AuthController {
     static async register(req: Request, res: Response) {

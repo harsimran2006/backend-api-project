@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import { User } from "../../infrastructure/database/models/User.js";
+import { User } from "../../infrastructure/mongodb/models/User.js";
 
 export class RegisterUser {
     async execute(username: string, email: string, password: string) {

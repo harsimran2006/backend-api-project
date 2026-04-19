@@ -1,4 +1,4 @@
-import { Comment } from "../../src/infrastructure/database/models/Comment.js";
+import { Comment } from "../../src/infrastructure/mongodb/models/Comment.js";
 
 describe("Comment Model Unit Tests", () => {
 

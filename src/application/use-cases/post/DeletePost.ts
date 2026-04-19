@@ -1,4 +1,4 @@
-import { Post } from "../../../infrastructure/database/models/Post.js";
+import { Post } from "../../../infrastructure/mongodb/models/Post.js";
 
 export class DeletePost {
     async execute(postId: string, userId: string) {

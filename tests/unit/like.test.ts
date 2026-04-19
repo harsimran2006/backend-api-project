@@ -1,4 +1,4 @@
-import { Like } from "../../src/infrastructure/database/models/Like.js";
+import { Like } from "../../src/infrastructure/mongodb/models/Like.js";
 
 describe("Like Model Unit Tests", () => {
 
