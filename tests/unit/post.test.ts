@@ -38,4 +38,29 @@ describe("Post Model Unit Tests", () => {
         expect(post.title).toBe("Test");
     });
 
+    it("should create post", async () => {
+        jest.spyOn(Post, "create").mockResolvedValue({ _id: "1" } as any);
+
+        const result = await Post.create({
+            title: "test",
+            body: "body",
+            userId: "user1",
+        });
+
+        expect(result).toHaveProperty("_id");
+    });
+
+    it("should fail if DB fails", async () => {
+        jest.spyOn(Post, "create").mockRejectedValue(new Error("DB error"));
+
+        await expect(
+            Post.create({
+                title: "test",
+                body: "body",
+                userId: "user1",
+            })
+        ).rejects.toThrow("DB error");
+    });
+
+
 });
