@@ -1,11 +1,16 @@
 import mongoose from "mongoose";
 
 export const connectDB = async () => {
-    try {
-        await mongoose.connect("mongodb://127.0.0.1:27017/forum_db");
-        console.log("MongoDB connected");
-    } catch (error) {
-        console.error("DB connection error:", error);
-        process.exit(1);
+    const mongoUri =
+        process.env.NODE_ENV === "test"
+            ? process.env.MONGO_URI_TEST
+            : process.env.MONGO_URI;
+
+    if (!mongoUri) {
+        throw new Error("Mongo URI not defined in .env");
     }
+
+    await mongoose.connect(mongoUri);
+
+    console.log("MongoDB connected");
 };

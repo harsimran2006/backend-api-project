@@ -4,6 +4,9 @@ import postRoutes from "./presentation/route/postRoutes.js";
 import commentRoutes from "./presentation/route/commentRoutes.js";
 import likeRoutes from "./presentation/route/likeRoutes.js";
 
+import adminRoutes from "./presentation/route/adminRoutes.js";
+
+
 
 
 const app = express();
@@ -16,7 +19,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/likes", likeRoutes);
-// Health endpoint (keep this!)
+app.use("/api/admin", adminRoutes);
 app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok" });
 });

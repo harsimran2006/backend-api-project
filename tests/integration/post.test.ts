@@ -2,13 +2,18 @@ import mongoose from "mongoose";
 import request from "supertest";
 import app from "../../src/app.js";
 
+import dotenv from "dotenv";
+dotenv.config();
+
 jest.setTimeout(20000);
+
+process.env.NODE_ENV = "test";
+
 
 let token = "";
 
 beforeAll(async () => {
-    await mongoose.connect("mongodb://127.0.0.1:27017/forum-test");
-
+    await mongoose.connect(process.env.MONGO_URI_TEST!);
 
     await request(app).post("/api/auth/register").send({
         username: "testuser2",
